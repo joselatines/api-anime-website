@@ -1,0 +1,32 @@
+@use '../variables' as *;
+body {
+    display: grid;
+    grid-template-areas: 'aside main main';
+    grid-template-columns: auto 1.5fr;
+
+    .navegation {
+        grid-area: navegation;
+        background-color: $my-primary-color;
+    }
+
+    .aside {
+        grid-area: aside;
+        color: $my-white-color;
+        background-color: $my-tertiary-color;
+    }
+
+    .main {
+        grid-area: main;
+    }
+}
+
+
+@media only screen and (max-width: 750px) {
+    body {
+        grid-template-areas: 'main';
+        grid-template-columns: auto;
+        .aside {
+            display: none;
+        }
+    }
+}

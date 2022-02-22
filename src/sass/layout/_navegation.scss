@@ -1,0 +1,82 @@
+@use '../variables' as *;
+.navegation {
+    .logo {
+        color: #fff;
+    }
+    width: 100%;
+    position: fixed;
+    z-index: 99;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    gap: 3rem;
+
+    .btn_srch_container {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex: auto;
+
+        .search_bar_container {
+            position: relative;
+            width: 100%;
+            color: #fff;
+
+            .search_bar {
+                padding: .4rem 1rem;
+                border-radius: 60px;
+                width: 95%; // Icon is in relative position not pu this in 100%
+
+                background-color: $my-secondary-color;
+
+                outline: none;
+                border: none;
+                background-image: none;
+                box-shadow: none;
+            }
+
+            ion-icon {
+                position: absolute;
+                right: 60px;
+                top: 5px;
+            }
+        }
+
+        .switch_theme_btn {
+            background-color: $my-white-color;
+            position: relative;
+            outline: none;
+            appearance: none;
+            width: 50px;
+            height: 20px;
+            border-radius: 50px;
+            transition: .5s;
+
+            &:checked {
+                background-color: $my-black-color;
+
+                &:before {
+                    right: 25px;
+                    background-color: $my-white-color;
+                }
+            }
+
+            &::before {
+                content: '';
+                width: 1.6rem;
+                height: 1.6rem;
+                border-radius: 50%;
+                position: absolute;
+                top: -3px;
+                right: 0;
+                background-color: $my-tertiary-color;
+                -webkit-box-shadow: -5px 0px 5px rgba(0, 0, 0, 0.050);
+                box-shadow: -5px 0px 5px rgba(0, 0, 0, 0.050);
+                transition: .5s;
+            }
+        }
+    }
+}

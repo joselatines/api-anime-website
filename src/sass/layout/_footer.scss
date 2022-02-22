@@ -1,0 +1,29 @@
+@use '../variables' as *;
+.footer {
+	display: flex;
+	justify-content: center;
+	margin-top: 5rem;
+
+	body.dark & {
+		color: $my-black-color;
+	}
+
+	.pagination {
+		padding: 10px;
+		word-spacing: 15px;
+		background: linear-gradient(134.17deg, #ffffff 4.98%, #e8e8f3 94.88%);
+		box-shadow: inset -5px -5px 15px rgba(255, 255, 255, 0.75),
+			inset 5px 5px 10px rgba(166, 180, 200, 0.75);
+		border-radius: 40px;
+
+		.pagination_element {
+			cursor: pointer;
+		}
+
+		.active {
+			background-color: $my-primary-color;
+			padding: 10px;
+			color: $my-white-color;
+		}
+	}
+}
